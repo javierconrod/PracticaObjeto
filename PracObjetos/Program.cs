@@ -10,29 +10,30 @@ namespace PracticaObjetos
     {
         static void Main(string[] args)
         {
-            //Declaración de variable
-            Persona persona1;
-            //Creación de instancia, alojamiento en memoria
-            persona1 = new Persona();
+            Contacto contacto1 = new Contacto();
+            contacto1.Nombre = "Pedro Lopez";
+            contacto1.TelefonoCasa = "(644) 115 - 2514";
 
-            persona1.nombre = "Juan";
-            persona1.apellidos = "Perez";
-            persona1.edad = 20;
-            persona1.altura = 1.5f;
+            Console.WriteLine("Contacto 1");
+            Console.WriteLine("Nombre: " + contacto1.Nombre);
+            Console.WriteLine("Telefono de casa: " + contacto1.TelefonoCasa);
 
-            Console.WriteLine(persona1.nombre + " " + persona1.apellidos + " tiene " + persona1.edad + " años de edad" );
+            Contacto contacto2 = new Contacto("Juan Perez");
 
-            persona1.cumplirAños();
+            Console.WriteLine("Contacto 2");
+            Console.WriteLine("Nombre: "+contacto2.Nombre);
 
-            Console.WriteLine("Ahora " + persona1.nombre + " tiene " + persona1.edad + " años de edad");
+            Contacto contacto3 = new Contacto("María Navarro", "1234567899", "6441152345", "5 de febrero 895", "maria@correo.com");
 
-            Console.WriteLine(persona1.nombre + " mide: " + persona1.altura + "m");
-
-            persona1.crecimiento(0.12f);
-
-            Console.WriteLine("Ahora " + persona1.nombre + " mide: " + persona1.altura + "m");
+            Console.WriteLine("Contacto 3");
+            Console.WriteLine("Nombre: " + contacto3.Nombre);
+            Console.WriteLine("Teléfono de casa: " + contacto3.TelefonoCasa);
+            Console.WriteLine("Teléfono celular: " + contacto3.TelefonoCelular);
+            Console.WriteLine("Dirección: " + contacto3.Direccion);
+            Console.WriteLine("Correo electrónico: " + contacto3.CorreoElectronico);
 
             Console.ReadLine();
+
         }
     }
 }
